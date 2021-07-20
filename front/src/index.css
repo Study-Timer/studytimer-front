@@ -1,0 +1,30 @@
+body {
+  font-family:'Roboto' ,'Lato', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #333;
+  margin: 0;
+  overflow-x: hidden; 
+  position: relative;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+p {
+  margin-bottom: 10px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Biryani', sans-serif;
+  font-weight: 800;
+  line-height: normal;
+}
+
+button, button:focus {
+outline: 0;
+}
