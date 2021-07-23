@@ -12,13 +12,15 @@ import {
 } from "./styles";
 
 import TextInput from "../../components/TextInput";
+import Logo from "../../components/Logo";
+
 import { Form, FormText } from "reactstrap";
 
 function Login() {
   return (
     <Container>
       <Left>
-        <h1>StudyTimer</h1>
+        <Logo></Logo>
 
         <Form
           style={{
