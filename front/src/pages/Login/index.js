@@ -10,6 +10,8 @@ import {
   StyledButton,
   NotRegisteredYet,
 } from "./styles";
+
+import TextInput from "../../components/TextInput";
 import { Form, FormText } from "reactstrap";
 
 function Login() {
@@ -23,26 +25,26 @@ function Login() {
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
-            flexDirection:"column"
+            flexDirection: "column"
           }}
         >
           <StyledFormGroup>
             <StyledLabel>Email</StyledLabel>
-            <StyledInput
+            <TextInput
               type="email"
               name="email"
               id="email"
               placeholder="example@example.com"
-            ></StyledInput>
+            />
           </StyledFormGroup>
           <StyledFormGroup>
             <StyledLabel>Password</StyledLabel>
-            <StyledInput
+            <TextInput
               type="password"
               name="password"
               id="password"
               placeholder="**********"
-            ></StyledInput>
+            />
           </StyledFormGroup>
           <StyledFormGroup>
             <StyledButton>Login</StyledButton>

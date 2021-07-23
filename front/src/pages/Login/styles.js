@@ -30,15 +30,6 @@ export const Right = styled.div`
   text-align: center;
 `;
 
-export const StyledInput = styled(Input)`
-  border-radius: 50px;
-  color: #ccc;
-  border: 1px solid #ccc;
-  width: 100%;
-  padding: 11px;
-  margin-top: 8px;
-`;
-
 export const StyledLabel = styled(Label)`
   color: black;
   font-weight: bold;
