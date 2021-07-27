@@ -60,3 +60,7 @@ margin-top: 15px;
   font-size: 15px;
   color: black;
 `;
+
+export const Clicable = styled.strong`
+  cursor: pointer;
+`;

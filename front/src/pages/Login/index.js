@@ -1,5 +1,6 @@
 import React from "react";
 
+
 import {
   Container,
   Left,
@@ -9,14 +10,21 @@ import {
   StyledFormGroup,
   StyledButton,
   NotRegisteredYet,
+  Clicable,
 } from "./styles";
 
 import TextInput from "../../components/TextInput";
 import Logo from "../../components/Logo";
+import Button from "../../components/Button";
+
+import login_image from "../../assets/login-side-image.svg"
 
 import { Form, FormText } from "reactstrap";
 
 function Login() {
+  function handleRegister(){
+    return console.log('clicou')
+  }
   return (
     <Container>
       <Left>
@@ -47,19 +55,17 @@ function Login() {
               id="password"
               placeholder="**********"
             />
-          </StyledFormGroup>
+           </StyledFormGroup>
           <StyledFormGroup>
-            <StyledButton>Login</StyledButton>
+            <Button width="100%">Login</Button>
           </StyledFormGroup>
         </Form>
         <NotRegisteredYet>
-          <p>Not registered yet? Create an Account.</p>
+          <p>Not registered yet? <Clicable><span onClick={handleRegister}>Create an Account</span></Clicable>.</p>
         </NotRegisteredYet>
       </Left>
       <Right>
-        <h2>
-          Count your<br></br> Study hours
-        </h2>
+      <img src={login_image} alt="Login Image" />
       </Right>
     </Container>
   );
