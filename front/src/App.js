@@ -1,6 +1,7 @@
 import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
 import "./App.css";
 import Login from "./pages/Login";
+import Register from "./pages/Register";
 
 function App() {
   const page404 = () => {
@@ -19,6 +20,7 @@ function App() {
         <Switch>
         <Redirect exact from="/" to="/login" />
           <Route path="/login" component={Login}/>
+          <Route path="/register" component={Register}/>
           <Route path="*" component={page404}/>
         </Switch>
       </BrowserRouter>
