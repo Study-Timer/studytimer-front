@@ -1,11 +1,10 @@
 import React from "react";
-
+import { useHistory } from "react-router-dom";
 
 import {
   Container,
   Left,
   Right,
-  StyledInput,
   StyledLabel,
   StyledFormGroup,
   StyledButton,
@@ -17,14 +16,18 @@ import TextInput from "../../components/TextInput";
 import Logo from "../../components/Logo";
 import Button from "../../components/Button";
 
-import login_image from "../../assets/login-side-image.svg"
+import login_image from "../../assets/login-side-image.svg";
 
 import { Form, FormText } from "reactstrap";
 
 function Login() {
-  function handleRegister(){
-    return console.log('clicou')
+  let history = useHistory();
+
+  function handleRegister() {
+    console.log("clicou");
+    history.replace("/register");
   }
+
   return (
     <Container>
       <Left>
@@ -35,7 +38,7 @@ function Login() {
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
-            flexDirection: "column"
+            flexDirection: "column",
           }}
         >
           <StyledFormGroup>
@@ -55,17 +58,23 @@ function Login() {
               id="password"
               placeholder="**********"
             />
-           </StyledFormGroup>
+          </StyledFormGroup>
           <StyledFormGroup>
             <Button width="100%">Login</Button>
           </StyledFormGroup>
         </Form>
         <NotRegisteredYet>
-          <p>Not registered yet? <Clicable><span onClick={handleRegister}>Create an Account</span></Clicable>.</p>
+          <p>
+            Not registered yet?{" "}
+            <Clicable>
+              <span onClick={handleRegister}>Create an Account</span>
+            </Clicable>
+            .
+          </p>
         </NotRegisteredYet>
       </Left>
       <Right>
-      <img src={login_image} alt="Login Image" />
+        <img src={login_image} alt="Login Image" />
       </Right>
     </Container>
   );
