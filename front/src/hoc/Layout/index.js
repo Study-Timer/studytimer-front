@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Container } from "./style";
 import SideBar from "../../components/SideBar";
+import Home from "../../pages/Home";
 
 function Layout() {
   const [index, setIndex] = useState(1);
@@ -9,7 +10,7 @@ function Layout() {
   const LayoutSwitcher = (index) => {
     switch (index) {
       case 1:
-        return <h1>Numero 1</h1>;
+        return <Home />;
       case 2: 
         return <h1>Subjects Page</h1>;
       case 3:

@@ -33,7 +33,7 @@ function SideBar({ component, setComponent, setIndex }) {
   return (
     <Container>
       <UserImageContainer>
-        <UserImage src="https://rollingstone.uol.com.br/media/_versions/billie-eilish-capa-happier-than-ever-cantora-foto-divulgacao_widelg.jpg"></UserImage>
+        <UserImage src="https://www.vagalume.com.br/billie-eilish/images/billie-eilish.jpg"></UserImage>
         <h6 style={{ margin: "5px" }}>User Name</h6>
       </UserImageContainer>
       <UserOptionsContainer>
