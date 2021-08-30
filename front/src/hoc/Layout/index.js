@@ -2,6 +2,9 @@ import React, { useState, useEffect } from "react";
 import { Container } from "./style";
 import SideBar from "../../components/SideBar";
 import Home from "../../pages/Home";
+import Profile from "../../pages/Profile";
+import Subjects from "../../pages/Subjects";
+
 
 function Layout() {
   const [index, setIndex] = useState(1);
@@ -12,11 +15,11 @@ function Layout() {
       case 1:
         return <Home />;
       case 2: 
-        return <h1>Subjects Page</h1>;
+        return <Subjects />;
       case 3:
         return <h1>Stats Page</h1>;
       case 4:
-        return <h1>User Page</h1>;
+        return <Profile />;
     }
   };
 

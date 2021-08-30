@@ -55,7 +55,7 @@ export const StyledButton = styled(Button)`
 `;
 
 export const NotRegisteredYet = styled.div`
-margin-top: 15px;
+  margin-top: 15px;
   text-align: center;
   font-size: 15px;
   color: black;

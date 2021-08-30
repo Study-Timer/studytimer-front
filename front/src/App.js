@@ -3,6 +3,8 @@ import "./App.css";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
 import Layout from "./hoc/Layout";
+import Profile from "./pages/Profile"
+import Subjects from "./pages/Subjects"
 
 function App() {
   const page404 = () => {
@@ -38,6 +40,8 @@ function App() {
           <Route path="/login" component={Login} />
           <Route path="/register" component={Register} />
           <Route path="/home" component={Layout} />
+          <Route path="/profile" component={Layout} />
+          <Route path="/subjects" component={Layout} />
           <Route path="*" component={page404} />
         </Switch>
       </BrowserRouter>
