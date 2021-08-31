@@ -5,6 +5,8 @@ import Register from "./pages/Register";
 import Layout from "./hoc/Layout";
 import Profile from "./pages/Profile"
 import Subjects from "./pages/Subjects"
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 function App() {
   const page404 = () => {
@@ -23,15 +25,7 @@ function App() {
     );
   };
 
-  function lolo() {
-    return(
-      <h1 style={{color: "pink"}}> 
-        LKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKK
-
-      </h1>
-    )
-  }
-
+ 
   return (
     <>
       <BrowserRouter>
