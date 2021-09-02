@@ -10,14 +10,19 @@ export const Container = styled.div`
   align-items: flex-start;
   justify-content: flex-start;
   text-align: center;
-  h1,
+  h1 {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 62px;
+  }
   h4 {
     color: black;
     margin: 0;
     padding: 0;
     font-family: Poppins;
     text-align: start;
-    font-size: 48px
+    font-size: 48px;
   }
 `;
 
@@ -40,10 +45,11 @@ export const FormItem = styled.div`
   display: flex;
   justify-content: space-between;
   margin-bottom: 38px;
-  `;
+`;
 
 export const SubsectionContent = styled.span`
   color: grey;
+  margin-right: 50px;
 `;
 
 export const SubsectionTitle = styled.h2`
@@ -53,6 +59,11 @@ export const SubsectionTitle = styled.h2`
 export const SubsectionItem = styled.div`
   display: flex;
   text-align: start;
+  img {
+    &:hover {
+      cursor: pointer;
+    }
+  }
 `;
 
 // export const ContentContainer = styled.div`
@@ -73,11 +84,4 @@ export const Main = styled.main`
 export const SubsectionContainer = styled.div`
   display: block;
   right: 0px;
-  `;
-
-
-
-
-
-
-
+`;

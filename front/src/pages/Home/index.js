@@ -1,6 +1,7 @@
 import React from "react";
 
 import { Container, Card, CardItem, CardItens } from "./style";
+import Modal from "../../components/Modal";
 
 function Home() {
   return (
