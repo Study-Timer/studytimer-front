@@ -49,7 +49,7 @@ export const FormItem = styled.div`
 
 export const SubsectionContent = styled.span`
   color: grey;
-  margin-right: 30px;
+  margin-right: 50px;
 `;
 
 export const SubsectionTitle = styled.h2`

@@ -41,7 +41,7 @@ function Profile() {
             <SubsectionContent>Nome</SubsectionContent>
             <img
               src={pencil}
-              onClick={() => toggle("name", "name")}
+              onClick={() => toggle("name", "Name")}
               style={{ width: "17px", height: "17px" }}
             ></img>
           </SubsectionItem>
@@ -54,7 +54,7 @@ function Profile() {
             <SubsectionContent>email@email.com </SubsectionContent>
             <img
               src={pencil}
-              onClick={() => toggle("email", "email")}
+              onClick={() => toggle("email", "Email")}
               style={{ width: "17px", height: "17px" }}
             ></img>
           </SubsectionItem>

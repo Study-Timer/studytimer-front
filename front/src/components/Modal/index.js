@@ -1,21 +1,33 @@
 import React from "react";
-import { Button, Modal, ModalBody } from "reactstrap";
-import { Container, TextInput, StyledFormGroup, StyledButton } from "./styles";
-import { StyledLabel } from "../../pages/Login/styles";
+import { Modal } from "reactstrap";
+import {
+  Container,
+  TextInput,
+  StyledFormGroup,
+  StyledButton,
+  Header,
+  StyledLabel,
+  Body,
+} from "./styles";
+import save from "../../assets/save.svg";
 
 const ModalExample = ({ modal, toggle, modalMessage, modalName, action }) => {
   return (
     <div>
       <Modal isOpen={modal} toggle={toggle}>
         <Container>
-          <h1>Edit your {modalName}</h1>
-          <ModalBody>
+          <Header>
+            <h1>Edit your {modalName}</h1>
+          </Header>
+          <Body>
             <StyledFormGroup>
               <StyledLabel>{modalName}</StyledLabel>
               <TextInput />
             </StyledFormGroup>
-          </ModalBody>
-          <StyledButton onClick={toggle}>Save</StyledButton>
+            <StyledButton onClick={toggle}>
+              <img src={save} /> SAVE
+            </StyledButton>
+          </Body>
         </Container>
       </Modal>
     </div>
