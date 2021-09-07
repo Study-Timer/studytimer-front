@@ -5,6 +5,7 @@ import Register from "./pages/Register";
 import Layout from "./hoc/Layout";
 import Profile from "./pages/Profile"
 import Subjects from "./pages/Subjects"
+import SubjectsDetails from "./pages/SubjectsDetails";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 
@@ -36,6 +37,7 @@ function App() {
           <Route path="/home" component={Layout} />
           <Route path="/profile" component={Layout} />
           <Route path="/subjects" component={Layout} />
+          <Route path="/details" component={SubjectsDetails} />
           <Route path="*" component={page404} />
         </Switch>
       </BrowserRouter>
