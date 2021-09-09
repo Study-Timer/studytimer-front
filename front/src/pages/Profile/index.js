@@ -1,14 +1,13 @@
 import React, { useState } from "react";
 import TextInputProfile from "../../components/TextInputProfile";
-import pencil from "../../assets/edit-3.svg";
+import edit from "../../assets/edit-icon.svg";
 import Modal from "../../components/Modal";
 import {
   Container,
-  SubsectionContent,
+  Body,
+  ProfileSubsection,
   SubsectionTitle,
-  Main,
-  SubsectionContainer,
-  SubsectionItem,
+  SubsectionContent,
 } from "./style";
 
 function Profile() {
@@ -31,43 +30,37 @@ function Profile() {
         modalName={modalName}
         action={modalAction}
       />
-      <h1 style={{ margin: "30px 0px" }}>Profile</h1>
-      <Main>
-        <SubsectionContainer>
-          <SubsectionItem>
-            <SubsectionTitle>Username</SubsectionTitle>
-          </SubsectionItem>
-          <SubsectionItem>
-            <SubsectionContent>Nome</SubsectionContent>
-            <img
-              src={pencil}
+        <h1 style={{ width: "260px" }}>Profile</h1>
+      <Body>
+        <ProfileSubsection>
+        <SubsectionTitle><h2>Username</h2></SubsectionTitle>
+        <SubsectionContent>
+          <span>Nome</span>
+          <img
+              src={edit}
               onClick={() => toggle("name", "Name")}
-              style={{ width: "17px", height: "17px" }}
+              style={{ width: "17px", height: "17px", cursor: "pointer" }}
             ></img>
-          </SubsectionItem>
-        </SubsectionContainer>
-        <SubsectionContainer>
-          <SubsectionItem>
-            <SubsectionTitle>Email</SubsectionTitle>
-          </SubsectionItem>
-          <SubsectionItem>
-            <SubsectionContent>email@email.com </SubsectionContent>
-            <img
-              src={pencil}
+        </SubsectionContent>
+        </ProfileSubsection>
+
+        <ProfileSubsection>
+        <SubsectionTitle><h2>Email</h2></SubsectionTitle>
+        <SubsectionContent>
+          <span>email@email.com</span>
+          <img
+              src={edit}
               onClick={() => toggle("email", "Email")}
-              style={{ width: "17px", height: "17px" }}
+              style={{ width: "17px", height: "17px", cursor: "pointer" }}
             ></img>
-          </SubsectionItem>
-        </SubsectionContainer>
-        <SubsectionContainer>
-          <SubsectionItem>
-            <SubsectionTitle>Subjects</SubsectionTitle>
-          </SubsectionItem>
-          <SubsectionItem>
-            <SubsectionContent>n° de materias</SubsectionContent>
-          </SubsectionItem>
-        </SubsectionContainer>
-      </Main>
+        </SubsectionContent>
+        </ProfileSubsection>
+
+        <ProfileSubsection>
+        <SubsectionTitle><h2>Subjects</h2></SubsectionTitle>
+        <SubsectionContent><span>10</span></SubsectionContent>
+        </ProfileSubsection>
+      </Body>
     </Container>
   );
 }

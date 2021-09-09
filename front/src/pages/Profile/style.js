@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { FormGroup, Label } from "reactstrap";
 
 export const Container = styled.div`
   width: 80%;
@@ -10,78 +9,43 @@ export const Container = styled.div`
   align-items: flex-start;
   justify-content: flex-start;
   text-align: center;
-  h1 {
-    font-style: normal;
-    font-weight: bold;
-    font-size: 48px;
-    line-height: 62px;
-  }
+  h1,
   h4 {
-    color: black;
     margin: 0;
     padding: 0;
     font-family: Poppins;
     text-align: start;
-    font-size: 48px;
   }
 `;
 
-export const StyledFormGroup = styled(FormGroup)`
-  width: 100%;
-  flex-grow: inherit;
-  height: 50px;
-  margin-top: 140px;
-  margin-left: 68px;
+export const Body = styled.div`
+  margin-top: 120px;
 `;
 
-export const StyledLabel = styled(Label)`
-  color: black;
-  font-weight: bold;
-  padding: 0;
-  font-size: 36px;
-`;
-
-export const FormItem = styled.div`
+export const ProfileSubsection = styled.div`
   display: flex;
-  justify-content: space-between;
-  margin-bottom: 38px;
-`;
-
-export const SubsectionContent = styled.span`
-  color: grey;
-  margin-right: 50px;
-`;
-
-export const SubsectionTitle = styled.h2`
-  color: black;
-`;
-
-export const SubsectionItem = styled.div`
-  display: flex;
-  text-align: start;
-  img {
-    &:hover {
-      cursor: pointer;
-    }
-  }
-`;
-
-// export const ContentContainer = styled.div`
-//   display: flex;
-//   flex-direction: column;
-//   gap: 20px;
-//   align-items: start;
-//   margin-left: 38px;
-// `;
-
-export const Main = styled.main`
-  justify-content: start;
   align-items: center;
-  display: flex;
-  flex-direction: column;
+  justify-content: flex-start;
+  margin-bottom: 25px;
 `;
 
-export const SubsectionContainer = styled.div`
-  display: block;
-  right: 0px;
+export const SubsectionTitle = styled.div`
+  display: flex;
+  width: 220px;
+  justify-content: flex-start;
+  align-items: flex-start;
+`;
+
+export const SubsectionContent = styled.div`
+  display: flex;
+  width: 250px;
+  align-items: center;
+  justify-content: space-between;
+
+  span {
+    color: #B1AAAA;
+    font-style: normal;
+    font-size: 24px;
+    line-height: 31px;
+  }
 `;
