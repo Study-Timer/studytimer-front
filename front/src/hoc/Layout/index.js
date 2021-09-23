@@ -1,27 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { Container } from "./style";
 import SideBar from "../../components/SideBar";
-import Home from "../../pages/Home";
-import Profile from "../../pages/Profile";
-import Subjects from "../../pages/Subjects";
-
+import { LayoutSwitcher } from "../../utils/layoutswitcher";
 
 function Layout() {
   const [index, setIndex] = useState(1);
   const [component, setComponent] = useState("home");
-
-  const LayoutSwitcher = (index) => {
-    switch (index) {
-      case 1:
-        return <Home />;
-      case 2: 
-        return <Subjects />;
-      case 3:
-        return <h1>Stats Page</h1>;
-      case 4:
-        return <Profile />;
-    }
-  };
 
   return (
     <Container>

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useHistory } from "react-router-dom";
 
 import {
@@ -21,12 +21,17 @@ import login_image from "../../assets/login-side-image.svg";
 import { Form, FormText } from "reactstrap";
 
 function Login() {
-  let history = useHistory();
-
   function handleRegister() {
     console.log("clicou");
     history.replace("/register");
   }
+
+  useEffect(() => {
+    const response = fetch("https://www.google.com/");
+    console.log(response);
+  }, []);
+
+  const history = useHistory();
 
   return (
     <Container>
@@ -40,6 +45,7 @@ function Login() {
             alignItems: "center",
             flexDirection: "column",
           }}
+          onSubmit={() => history.replace("/subjects")}
         >
           <StyledFormGroup>
             <StyledLabel>Email</StyledLabel>
