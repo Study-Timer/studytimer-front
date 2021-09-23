@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useHistory } from "react-router-dom";
 
 import {
@@ -27,6 +27,11 @@ function Login() {
     console.log("clicou");
     history.replace("/register");
   }
+
+  useEffect(() => {
+    const response = fetch("https://www.google.com/");
+    console.log(response); 
+  }, []);
 
   return (
     <Container>

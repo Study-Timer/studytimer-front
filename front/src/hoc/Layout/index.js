@@ -16,8 +16,6 @@ function Layout() {
         return <Home />;
       case 2: 
         return <Subjects />;
-      case 3:
-        return <h1>Stats Page</h1>;
       case 4:
         return <Profile />;
     }

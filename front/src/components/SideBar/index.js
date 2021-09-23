@@ -3,7 +3,6 @@ import logo from "../../assets/logo-app.svg";
 import home from "../../assets/home.svg";
 import book from "../../assets/book.svg";
 import user from "../../assets/user.svg";
-import stats from "../../assets/bar-chart-2.svg";
 import {
   Container,
   UserImage,
@@ -21,9 +20,6 @@ function SideBar({ component, setComponent, setIndex }) {
     } else if (n === 2) {
       setComponent("subjects");
       setIndex(2);
-    } else if (n === 3) {
-      setComponent("stats");
-      setIndex(3);
     } else if (n === 4) {
       setComponent("user");
       setIndex(4);
@@ -42,6 +38,7 @@ function SideBar({ component, setComponent, setIndex }) {
           onClick={() => changeComponent(1)}
         >
           <img
+            alt="aaaaa"
             src={home}
             style={{ width: "27px", height: "33px", marginRight: "15px" }}
           ></img>
@@ -54,30 +51,21 @@ function SideBar({ component, setComponent, setIndex }) {
           onClick={() => changeComponent(2)}
         >
           <img
+            alt="aaaaa"
             src={book}
             style={{ width: "27px", height: "33px", marginRight: "15px" }}
           ></img>
           Subjects
         </UserOption>
       </UserOptionsContainer>
-      <UserOptionsContainer>
-        <UserOption
-          active={component === "stats"}
-          onClick={() => changeComponent(3)}
-        >
-          <img
-            src={stats}
-            style={{ width: "27px", height: "33px", marginRight: "15px" }}
-          ></img>
-          Stats
-        </UserOption>
-      </UserOptionsContainer>
+
       <UserOptionsContainer>
         <UserOption
           active={component === "user"}
           onClick={() => changeComponent(4)}
         >
           <img
+            alt="aaaaa"
             src={user}
             style={{ width: "27px", height: "33px", marginRight: "15px" }}
           ></img>
@@ -86,7 +74,11 @@ function SideBar({ component, setComponent, setIndex }) {
       </UserOptionsContainer>
 
       <LogoContainer>
-        <img src={logo} style={{ width: "60%", height: "60px" }}></img>
+        <img
+          src={logo}
+          alt="aaaaa"
+          style={{ width: "60%", height: "60px" }}
+        ></img>
       </LogoContainer>
     </Container>
   );
