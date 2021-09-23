@@ -21,8 +21,6 @@ import login_image from "../../assets/login-side-image.svg";
 import { Form, FormText } from "reactstrap";
 
 function Login() {
-  let history = useHistory();
-
   function handleRegister() {
     console.log("clicou");
     history.replace("/register");
@@ -30,8 +28,10 @@ function Login() {
 
   useEffect(() => {
     const response = fetch("https://www.google.com/");
-    console.log(response); 
+    console.log(response);
   }, []);
+
+  const history = useHistory();
 
   return (
     <Container>
@@ -45,6 +45,7 @@ function Login() {
             alignItems: "center",
             flexDirection: "column",
           }}
+          onSubmit={() => history.replace("/subjects")}
         >
           <StyledFormGroup>
             <StyledLabel>Email</StyledLabel>
