@@ -25,7 +25,7 @@ const ModalExample = ({ modal, toggle, modalMessage, modalName, action }) => {
               <TextInput />
             </StyledFormGroup>
             <StyledButton onClick={toggle}>
-              <img src={save} /> SAVE
+              <img src={save} alt="img" /> SAVE
             </StyledButton>
           </Body>
         </Container>

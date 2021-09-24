@@ -3,8 +3,6 @@ import "./App.css";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
 import Layout from "./hoc/Layout";
-import Profile from "./pages/Profile"
-import Subjects from "./pages/Subjects"
 import SubjectsDetails from "./pages/SubjectsDetails";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
