@@ -22,7 +22,7 @@ export const Header = styled.div`
   display: flex;
   gap: 10px;
   align-items: center;
-`
+`;
 
 export const CardsContainer = styled.div`
   display: flex;

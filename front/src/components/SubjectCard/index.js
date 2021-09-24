@@ -13,12 +13,11 @@ function SubjectCard({ name, time, index, setIndex }) {
         <HeaderButtons>
           <img
             alt="hoje"
-            onClick={() => LayoutSwitcher(3)}
+            onClick={() => LayoutSwitcher(3), () => setIndex(!index)}
             src={arrow}
             style={{ width: "17px", height: "17px", cursor: "pointer" }}
           ></img>
           <img
-            onClick={() => setIndex(!index)}
             alt="hoje"
             src={edit}
             style={{ width: "17px", height: "17px", cursor: "pointer" }}
