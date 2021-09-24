@@ -5,7 +5,7 @@ function ActivityCard() {
     return (
         <Card>
           <CardTitle>
-            <input type="text" />
+           Nova Atividade
           </CardTitle>
           <CardContent>
             <Timer>
