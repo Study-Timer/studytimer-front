@@ -15,18 +15,20 @@ function Subjects() {
   const [modalName, setModalName] = useState();
   const [modalAction, setModalAction] = useState({});
   const [index, setIndex] = useState(false);
+
   const [cards, setCards] = useState([
     { name: "Matemática", time: "600", index: index, setIndex: setIndex },
     {
       name: "História",
-      time: "600",
+      time: "50",
       index: index,
       setIndex: setIndex,
     },
-    { name: "Biologia", time: "600", index: index, setIndex: setIndex },
-    { name: "Biologia", time: "600", index: index, setIndex: setIndex },
+    { name: "Biologia", time: "301", index: index, setIndex: setIndex },
+    { name: "Sociologia", time: "230", index: index, setIndex: setIndex },
+    { name: "Física", time: "125", index: index, setIndex: setIndex },
+    { name: "Português", time: "450", index: index, setIndex: setIndex },
   ]);
-
 
   function toggle(message, name) {
     setModalMessage(message);
@@ -35,12 +37,11 @@ function Subjects() {
   }
 
   function removeElement(i) {
-    // setCards({
-    //   cards: cards.filter((e) => {
-    //     return e.name !== i;
-    //   }),
-    // });
-    console.log(i);
+    setCards(
+      cards.filter((e) => {
+        return e.name !== i;
+      })
+    );
   }
 
   const pageSubjects = () => {
@@ -65,6 +66,10 @@ function Subjects() {
           modalMessage={modalMessage}
           modalName={modalName}
           action={modalAction}
+          cards={cards}
+          setCards={setCards}
+          index={index}
+          setIndex={setIndex}
         />
         <div>
           <Header>
