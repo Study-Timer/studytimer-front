@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Modal } from "reactstrap";
 import {
   Container,
@@ -28,7 +28,11 @@ const ModalExample = ({
     index: index,
     setIndex: setIndex,
   });
- 
+
+  useEffect(() => {
+    setData({ name: "", time: "00:00", index: index, setIndex: setIndex });
+  }, [cards]);
+
   return (
     <div>
       <Modal isOpen={modal} toggle={toggle}>
@@ -42,25 +46,22 @@ const ModalExample = ({
               <TextInput
                 value={data.name}
                 onChange={(e) => {
-                  setData({ name: e.target.value });
+                  setData({ ...data, name: e.target.value });
                 }}
               />
             </StyledFormGroup>
             <StyledFormGroup>
               <StyledLabel>Description</StyledLabel>
-              <TextInput
-               
-              />
+              <TextInput />
             </StyledFormGroup>
             <StyledFormGroup>
               <StyledLabel>Difficulty</StyledLabel>
-              <TextInput
-             
-              />
+              <TextInput />
             </StyledFormGroup>
             <StyledButton
               onClick={() => {
                 toggle();
+                setCards([...cards, data]);
               }}
             >
               <img src={save} /> SAVE

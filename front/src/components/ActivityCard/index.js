@@ -1,18 +1,18 @@
 import React from "react";
 import { Card, CardTitle, CardContent, Timer, TimerButton } from "./styles";
 
-function ActivityCard() {
+function ActivityCard({text, time, name}) {
     return (
         <Card>
           <CardTitle>
-           Nova Atividade
+         {name}
           </CardTitle>
           <CardContent>
             <Timer>
-              <h4>00:00:00</h4>
+              <h4>{time}</h4>
             </Timer>
             <TimerButton>
-              Start
+             {text}
             </TimerButton>
           </CardContent>
         </Card>
