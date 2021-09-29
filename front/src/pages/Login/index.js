@@ -26,11 +26,6 @@ function Login() {
     history.replace("/register");
   }
 
-  useEffect(() => {
-    const response = fetch("https://www.google.com/");
-    console.log(response);
-  }, []);
-
   const history = useHistory();
 
   return (

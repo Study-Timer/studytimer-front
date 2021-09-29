@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Modal } from "reactstrap";
 import {
   Container,
@@ -11,7 +11,24 @@ import {
 } from "./styles";
 import save from "../../assets/save.svg";
 
-const ModalExample = ({ modal, toggle, modalMessage, modalName, action }) => {
+const ModalExample = ({
+  modal,
+  toggle,
+  modalMessage,
+  modalName,
+  action,
+  cards,
+  setCards,
+  index,
+  setIndex,
+}) => {
+  const [data, setData] = useState({
+    name: "",
+    time: "00:00",
+    index: index,
+    setIndex: setIndex,
+  });
+ 
   return (
     <div>
       <Modal isOpen={modal} toggle={toggle}>
@@ -22,17 +39,30 @@ const ModalExample = ({ modal, toggle, modalMessage, modalName, action }) => {
           <Body>
             <StyledFormGroup>
               <StyledLabel>Name</StyledLabel>
-              <TextInput />
+              <TextInput
+                value={data.name}
+                onChange={(e) => {
+                  setData({ name: e.target.value });
+                }}
+              />
             </StyledFormGroup>
             <StyledFormGroup>
               <StyledLabel>Description</StyledLabel>
-              <TextInput />
+              <TextInput
+               
+              />
             </StyledFormGroup>
             <StyledFormGroup>
               <StyledLabel>Difficulty</StyledLabel>
-              <TextInput />
+              <TextInput
+             
+              />
             </StyledFormGroup>
-            <StyledButton onClick={toggle}>
+            <StyledButton
+              onClick={() => {
+                toggle();
+              }}
+            >
               <img src={save} /> SAVE
             </StyledButton>
           </Body>
