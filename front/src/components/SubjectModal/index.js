@@ -61,7 +61,6 @@ const ModalExample = ({
             <StyledButton
               onClick={() => {
                 toggle();
-                setCards({cards: [...cards, data]});
               }}
             >
               <img src={save} /> SAVE
