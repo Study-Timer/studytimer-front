@@ -37,7 +37,7 @@ function Profile() {
             <h2>Username</h2>
           </SubsectionTitle>
           <SubsectionContent>
-            <span>Julliete</span>
+            <span>Juliette</span>
             <img
               alt="ksdjaskjd"
               src={edit}
@@ -52,7 +52,7 @@ function Profile() {
             <h2>Email</h2>
           </SubsectionTitle>
           <SubsectionContent>
-            <span>jullibonitinha@email.com</span>
+            <span>juliette@gmail.com</span>
             <img
               alt="ksdjaskjd"
               src={edit}
@@ -67,7 +67,7 @@ function Profile() {
             <h2>Subjects</h2>
           </SubsectionTitle>
           <SubsectionContent>
-            <span>7</span>
+            <span>6</span>
           </SubsectionContent>
         </ProfileSubsection>
       </Body>

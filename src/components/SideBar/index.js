@@ -41,7 +41,7 @@ function SideBar({ component, setComponent, setIndex }) {
     <Container>
       <UserImageContainer>
         <UserImage src="https://pbs.twimg.com/media/ExxK2ztWUAEDkeR?format=jpg&name=900x900"></UserImage>
-        <h6 style={{ margin: "5px" }}>Username</h6>
+        <h6 style={{ margin: "5px" }}>Juliette</h6>
       </UserImageContainer>
       <UserOptionsContainer>
         <UserOption

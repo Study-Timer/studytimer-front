@@ -7,7 +7,7 @@ function Home() {
   return (
     <Container>
       <div style={{}}>
-        <h1 style={{ width: "260px" }}>Hello Julliete</h1>
+        <h1 style={{ width: "260px" }}>Hello Juliette</h1>
         <h4 style={{ color: "#B1AAAA" }}>Welcome Back!</h4>
       </div>
       <Card>
